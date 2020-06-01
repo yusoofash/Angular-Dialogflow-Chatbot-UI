@@ -4,6 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:heroku": "node dist/server",
+    "postinstall": "npm run build:ssr",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
