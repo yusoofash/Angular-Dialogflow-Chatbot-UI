@@ -1,0 +1,49 @@
+$chat-height: 700px;
+
+
+.chat-app {
+    > div {
+        padding: 0;
+    }
+
+    .left-side {
+        h4 {
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
+
+        ul {
+            max-height: $chat-height - 60px;
+            overflow: auto;
+            border-radius: 0;
+
+            li {
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+::ng-deep nb-chat {
+    height: $chat-height !important;
+
+    .header {
+        border: 0 !important;
+    }
+
+    .with-button {
+        border-radius: unset !important;
+
+        + button {
+            border-radius: unset !important;
+            background-color: var(--primary);
+            color: var(--white);
+
+            &:hover {
+                color: var(--white);
+            }
+        }
+    }
+}

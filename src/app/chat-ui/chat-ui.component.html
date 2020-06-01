@@ -1,0 +1,33 @@
+<div class="row chat-app">
+  <div class="col-md-3 left-side">
+    <div class="bg-dark h-100">
+      <h4 class="px-3 m-0 bg-warning text-white font-weight-bold">SAPi AMS Chatbot</h4>
+      <ul class="list-group p-0">
+        <li class="list-group-item list-group-item-action list-group-item-secondary p-3" 
+        *ngFor="let question of questions" (click)="addQuestion(question)">
+          {{ question }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-md-9">
+    <nb-chat size="large">
+      <nb-chat-message *ngFor="let msg of messages"
+        [message]="msg.text"
+        [reply]="msg.reply"
+        [sender]="msg.user.name"
+        [date]="msg.date"
+        [files]="msg.files"
+        [quote]="msg.quote"
+        [latitude]="msg.latitude"
+        [longitude]="msg.longitude"
+        [avatar]="msg.user.avatar">
+      </nb-chat-message>
+      <nb-chat-form (send)="sendMessage($event)" [dropFiles]="false" 
+      [message]="message" buttonIcon="nb-send" buttonTitle="Send"
+      messagePlaceholder="Enter your input">
+      </nb-chat-form>
+    </nb-chat>
+  </div>
+</div>
