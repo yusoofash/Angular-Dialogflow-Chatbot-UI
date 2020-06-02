@@ -23,9 +23,18 @@ export class ChatUiComponent implements OnInit {
   ws: WebSocket;
 
   questions = [
-    'Hi!',
-    'Hello there',
-    'What is your name?'
+    'ABAP',
+    'JAVA',
+    'BOBJ',
+    'BODS',
+    'Web Dispatcher',
+    'SAP CC',
+    'App Dynamics',
+    'Cloud Connector',
+    'SAP Upgrade',
+    'SAP Refresh',
+    'SAP Export/Import',
+    'SAP HANA'
   ];
 
   constructor() { }
