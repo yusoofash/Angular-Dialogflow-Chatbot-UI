@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  wsEndpoint: 'wss://chatbot-server-dialogflow.herokuapp.com/',
+  wsEndpoint: 'ws://localhost:3000/',
+  apiEndpoint: 'http://localhost:3000/api',
 };
 
 /*

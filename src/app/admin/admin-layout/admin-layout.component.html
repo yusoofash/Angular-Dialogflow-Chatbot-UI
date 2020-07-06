@@ -1,0 +1,21 @@
+<nb-layout-header>
+    <i class="fas fa-bars mr-3" role="button" (click)="toggle()" style="font-size: 1.2rem;"></i>
+    <h3 class="text-uppercase m-0 text-bold">Admin Panel</h3>
+</nb-layout-header>
+
+<nb-sidebar tag="left" fixed state="collapsed">
+    <ul class="list-group list-group-flush p-0">
+        <li class="list-group-item">
+            <a routerLink="/admin/add-intent" (click)="toggle()">
+                Add Intent
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a routerLink="/admin/show-intent" (click)="toggle()">
+                Show Intent
+            </a>
+        </li>
+    </ul>
+</nb-sidebar>
+
+<router-outlet></router-outlet>

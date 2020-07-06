@@ -1,0 +1,34 @@
+<div class="container">
+    <h1 class="text-center">Show Intent</h1>
+    <div class="table-responsive">
+        <table class="table table-light">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Intent</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let intent of $intents | async">
+                    <td>{{intent.displayName}}</td>
+                    <td>
+                        <a routerLink="/admin/edit-intent/" [queryParams]="{name: intent.name}">
+                            <i role="button" class="fas fa-pencil-alt pr-3 text-warning"></i>
+                        </a>
+                        <i role="button" class="fas fa-trash-alt text-danger" (click)="confirmDelete(confirm, intent.name)"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<ng-template #confirm let-data let-ref="dialogRef">
+    <div class="alert alert-danger">
+        <p>{{data}}</p>
+        <div class="text-right">
+            <button class="btn btn-danger mr-3" (click)="ref.close(true)">Yes</button>
+            <button class="btn btn-outline-danger" (click)="ref.close()">No</button>
+        </div>
+    </div>
+</ng-template>
