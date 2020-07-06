@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
-import { ChatUiService } from 'src/app/shared/services/chat-ui.service';
-import { Intent } from 'src/app/shared/models/showIntent.model';
+import { ChatUiService } from '../../shared/services/chat-ui.service';
+import { Intent } from '../../shared/models/showIntent.model';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 

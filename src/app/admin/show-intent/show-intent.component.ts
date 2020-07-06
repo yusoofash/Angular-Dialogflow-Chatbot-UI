@@ -1,6 +1,6 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
-import { ChatUiService } from 'src/app/shared/services/chat-ui.service';
-import { Intent } from 'src/app/shared/models/showIntent.model';
+import { ChatUiService } from '../../shared/services/chat-ui.service';
+import { Intent } from '../../shared/models/showIntent.model';
 import { Observable } from 'rxjs';
 import { NbDialogService } from '@nebular/theme';
 import { ToastrService } from 'ngx-toastr';
