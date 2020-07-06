@@ -46,6 +46,13 @@ export class AddIntentComponent implements OnInit {
     return this.intentForm.controls;
   }
 
+  get trainingPhraseControls() {
+    return (this.f.trainingPhrasesParts as FormArray).controls;
+  }
+  get messageTexts() {
+    return (this.f.messageTexts as FormArray).controls;
+  }
+
   private findDataAndPatchForm() {
     this.chatService.showIntentById(this.name)
       .subscribe(res => {

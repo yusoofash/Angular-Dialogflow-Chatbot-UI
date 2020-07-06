@@ -12,7 +12,7 @@
         Training Phrases<span class="text-danger">*</span>
       </label>
 
-      <div class="d-flex align-items-center mb-2" *ngFor="let phrase of f.trainingPhrasesParts.controls; let i=index">
+      <div class="d-flex align-items-center mb-2" *ngFor="let phrase of trainingPhraseControls; let i=index">
         <input [formControl]="phrase" id="trainingPhrases" type="text" class="form-control">
         <button class="btn btn-danger ml-2" type="button" (click)="removeTrainingPhrase(i)" *ngIf="i !== 0">
           Delete
@@ -27,7 +27,7 @@
         Responses<span class="text-danger">*</span>
       </label>
 
-      <div class="d-flex align-items-center mb-2" *ngFor="let msg of f.messageTexts.controls; let i=index">
+      <div class="d-flex align-items-center mb-2" *ngFor="let msg of messageTexts; let i=index">
         <input [formControl]="msg" id="messageTexts" type="text" class="form-control">
         <button class="btn btn-danger ml-2" type="button" (click)="removeMessageText(i)" *ngIf="i !== 0">
           Delete
